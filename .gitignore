@@ -2,6 +2,7 @@
 # Logs
 logs
 *.log
+build
 npm-debug.log*
 package-lock.json
 # Runtime data
