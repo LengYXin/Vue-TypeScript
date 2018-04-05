@@ -1,0 +1,18 @@
+<div>
+    <table style="border: 1px solid red;width: 300px">
+        <tr style="border: 1px solid red">
+            <td>id</td>
+            <td>name</td>
+            <td>age</td>
+        </tr>
+        <tr v-for="t in list" >
+            <td style="border: 1px solid red">{{t.id}}</td>
+            <td style="border: 1px solid red">{{t.name}}</td>
+            <td style="border: 1px solid red">{{t.age}}</td>
+        </tr>
+        <tr v-if="loading">
+            <td colspan="3" style="text-align: center;color: red">Loading...</td>
+        </tr>
+    </table>
+    <button @click="onClick">{{message}}</button>
+</div>

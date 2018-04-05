@@ -1,14 +1,15 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import router from "./routers"
-import template from "./template.html"
+import App from "./App.vue"
+// import template from "./template.html"
 Vue.config.productionTip = false
 Vue.use(Router)
 /* eslint-disable no-new */
 new Vue({
   el: '#AppStart',
   router,
-  template
+  template:'<App/>',
 //   template: `
 //   <div>
 //   <img src="/assets/logo.png">
@@ -30,5 +31,5 @@ new Vue({
 //   <router-view></router-view>
 // </div>
 //   `,
-  // components: { Help }
+  components: { App }
 })

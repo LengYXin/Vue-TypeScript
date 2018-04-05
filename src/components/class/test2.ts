@@ -11,7 +11,7 @@ import Component from 'vue-class-component'
   </div>
   `
 })
-export default class Hello extends Vue {
+export default class  extends Vue {
   // 初始数据可以直接声明为实例的属性
   message = 'Hello!'
   count=0
