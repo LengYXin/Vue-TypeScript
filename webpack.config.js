@@ -5,13 +5,16 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const path = require('path');
 // 公共css模块
-const commonCss = new ExtractTextPlugin({
-    filename: 'css/common.css',
-    allChunks: true
-});
+// const commonCss = new ExtractTextPlugin({
+//     filename: 'css/common.css',
+//     allChunks: true
+// });
 // 项目css模块
 const styleCss = new ExtractTextPlugin({
     filename: 'css/style.css',
+    // filename: (getPath) => {
+    //     return getPath('css/style.css').replace('css/js', 'css');
+    // },
     allChunks: true
 });
 const srcPath = path.resolve(__dirname, "src");
@@ -25,7 +28,7 @@ module.exports = (evn = {}) => {
             from: 'src/assets',
             to: 'assets'
         }]),
-        commonCss,
+        // commonCss,
         styleCss
     ];
     // 生产环境
@@ -79,14 +82,14 @@ module.exports = (evn = {}) => {
                 },
                 {
                     test: /\.css$/,
-                    include: srcPath,
+                    // include: srcPath,
                     use: styleCss.extract(cssOptions)
                 },
-                {
-                    test: /\.css$/,
-                    exclude: srcPath,
-                    use: commonCss.extract(cssOptions)
-                },
+                // {
+                //     test: /\.css$/,
+                //     exclude: srcPath,
+                //     use: commonCss.extract(cssOptions)
+                // },
                 {
                     test: /\.(gif|jpg|png|woff|svg|eot|ttf)\??.*$/,
                     loader: 'url-loader?limit=50000&name=[path][name].[ext]'

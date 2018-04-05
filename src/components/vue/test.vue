@@ -70,5 +70,7 @@ export default {
 </script>
 
 <style>
-
+.test{
+  text-align: center;
+}
 </style>

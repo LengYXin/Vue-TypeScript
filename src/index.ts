@@ -1,35 +1,19 @@
+// 懒加载 使用这个方式css提取不出来 webpack3没有这个问题
+// import 'element-ui/lib/theme-chalk/index.css'
+import './style.css'
 import Vue from 'vue'
 import Router from 'vue-router'
+import ElementUI from 'element-ui'
 import router from "./routers"
 import App from "./App.vue"
-// import template from "./template.html"
-Vue.config.productionTip = false
-Vue.use(Router)
+Vue.config.productionTip = false;
+Vue.use(Router);
+Vue.use(ElementUI);
 /* eslint-disable no-new */
 new Vue({
   el: '#AppStart',
   router,
-  template:'<App/>',
-//   template: `
-//   <div>
-//   <img src="/assets/logo.png">
-//   <ul>
-//    <li>
-//    <router-link to="/Hello">路由 Hello</router-link></li>
-//    <li>
-//    <router-link to="/hello2">路由 hello2</router-link>
-//    </li>
-//    <li>
-//    <router-link to="/tsx">路由 tsx</router-link>
-//    </li>
-//    <li>
-//    <router-link to="/vuecom">路由 vuecom</router-link>
-//    </li>
-//   </ul>
-  
-  
-//   <router-view></router-view>
-// </div>
-//   `,
-  components: { App }
+  render(h) {
+    return h(App);
+  },
 })

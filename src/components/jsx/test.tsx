@@ -52,15 +52,34 @@ export default class extends Vue {
               <td>age</td>
             </tr>
             {/* 数据 */}
-            {this.list.map(t => <tr  >
+            {/* {this.list.map(t => <tr  >
               <td style="border: 1px solid red">{t.id}</td>
               <td style="border: 1px solid red">{t.name}</td>
               <td style="border: 1px solid red">{t.age}</td>
-            </tr>)}
+            </tr>)} */}
+            <el-table
+             v-loading={this.loading}
+              data={this.list}
+              style="width: 100%">
+              <el-table-column
+                prop="id"
+                label="日期"
+                width="180">
+              </el-table-column>
+              <el-table-column
+                prop="name"
+                label="姓名"
+                width="180">
+              </el-table-column>
+              <el-table-column
+                prop="age"
+                label="地址">
+              </el-table-column>
+            </el-table>
             {/* loading */}
-            {this.loading ? <tr >
+            {/* {this.loading ? <tr >
               <td colspan="3" style="text-align: center;color: red">Loading...</td>
-            </tr> : null}
+            </tr> : null} */}
           </table>
           <button on-click={this.getList}>获取数据</button>
         </div>

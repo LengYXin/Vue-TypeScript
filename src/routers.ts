@@ -31,5 +31,26 @@ export default new Router({
         name: 'vueTest',
         component: vueTest
       }
+      // 懒加载 但是 css 提取有问题
+      // {
+      //   path: '/class1',
+      //   name: 'class1',
+      //   component: () => import("./components/class/test1")
+      // },
+      // {
+      //   path: '/class2',
+      //   name: 'class2',
+      //   component: () => import("./components/class/test2")
+      // },
+      // {
+      //   path: '/tsx',
+      //   name: 'tsx',
+      //   component: () => import("./components/jsx/test")
+      // },
+      // {
+      //   path: '/vueTest',
+      //   name: 'vueTest',
+      //   component: () => import("./components/vue/test.vue")
+      // }
     ]
   })
