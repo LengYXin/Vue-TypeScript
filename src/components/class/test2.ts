@@ -5,6 +5,7 @@ import Component from 'vue-class-component'
   // 所有的组件选项都可以放在这里
   template: `
   <div>
+  <p>Class Template 组件</p>
   <span>{{count}}</span>
   <input type="text" v-model="count">
   <button @click="onClick">{{message}}</button>

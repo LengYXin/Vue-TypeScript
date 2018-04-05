@@ -1,6 +1,6 @@
 <template>
   <div>
-    哈哈哈哈我是VUE组件
+    VUE组件
     <input type="text" v-model="name">
     <span>{{name}}</span>
     <button @click="add">点击按钮</button>
