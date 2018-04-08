@@ -6,18 +6,25 @@
         <template slot="title"><i class="el-icon-message"></i>导航一</template>
         <el-menu-item-group>
           <template slot="title">分组一</template>
-          <el-menu-item index="1-1">
-           <router-link to="/class1">路由 class1</router-link>
+          <router-link to="/class1"><el-menu-item index="1-1">
+           路由 class1
           </el-menu-item>
+          </router-link>
+          <router-link to="/class2">
           <el-menu-item index="1-2">
-            <router-link to="/class2">路由 class2</router-link>
+            路由 class2
           </el-menu-item>
+          </router-link>
+          <router-link to="/tsx">
           <el-menu-item index="1-3">
-            <router-link to="/tsx">路由 tsx</router-link>
+            路由 tsx
           </el-menu-item>
+          </router-link>
+          <router-link to="/vueTest">
           <el-menu-item index="1-4">
-            <router-link to="/vueTest">路由 vueTest</router-link>
+            路由 vueTest
           </el-menu-item>
+          </router-link>
         </el-menu-item-group>
       </el-submenu>
     </el-menu>
@@ -44,11 +51,11 @@
 </template>
 
 <script>
-import router from "./routers"
+import router from "./routers";
 export default {
   name: "App",
-  created(){
-    console.log("router",router);
+  created() {
+    console.log("router", router);
   }
 };
 </script>
