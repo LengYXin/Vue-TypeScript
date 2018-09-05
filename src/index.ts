@@ -11,7 +11,8 @@ Vue.use(ElementUI);
 new Vue({
   el: '#AppStart',
   router,
-  render(h) {
-    return h(App);
-  },
+  template: ` <transition name="el-fade-in-linear" mode="out-in"> <router-view></router-view> </transition>`
+  // render(h) {
+  //   return h(App);
+  // },
 })
